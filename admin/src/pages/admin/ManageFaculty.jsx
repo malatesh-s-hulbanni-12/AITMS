@@ -190,7 +190,7 @@ const EditFacultyModal = ({ faculty, onClose, onUpdate }) => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.put(
-        `http://localhost:5000/api/faculty/${faculty._id}`,
+        `https://aitms-slnp.onrender.com/api/faculty/${faculty._id}`,
         formData,
         {
           headers: { 
@@ -481,7 +481,7 @@ const ManageFaculty = () => {
       }
 
       const response = await axios.get(
-        `http://localhost:5000/api/faculty/all?${params}`,
+        `https://aitms-slnp.onrender.com/api/faculty/all?${params}`,
         {
           headers: { 
             'Authorization': `Bearer ${token}`,
@@ -517,7 +517,7 @@ const ManageFaculty = () => {
       const token = localStorage.getItem('token');
       
       const response = await axios.get(
-        'http://localhost:5000/api/faculty/stats',
+        'https://aitms-slnp.onrender.com/api/faculty/stats',
         {
           headers: { 
             'Authorization': `Bearer ${token}`,
@@ -564,7 +564,7 @@ const ManageFaculty = () => {
       const token = localStorage.getItem('token');
       
       const response = await axios.delete(
-        `http://localhost:5000/api/faculty/${id}`,
+        `https://aitms-slnp.onrender.com/api/faculty/${id}`,
         {
           headers: { 
             'Authorization': `Bearer ${token}`,
