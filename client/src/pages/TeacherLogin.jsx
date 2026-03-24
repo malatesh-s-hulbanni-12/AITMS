@@ -31,7 +31,7 @@ const TeacherLogin = () => {
       setError(null);
       
       try {
-        const API_URL = 'http://localhost:5000/api/client/colleges/all';
+        const API_URL = 'https://aitms-slnp.onrender.com/api/client/colleges/all';
         const response = await axios.get(API_URL);
 
         if (response.data.success) {
@@ -77,7 +77,7 @@ const TeacherLogin = () => {
       setError(null);
 
       try {
-        const API_URL = `http://localhost:5000/api/client/faculty/by-college/${formData.collegeId}`;
+        const API_URL = `https://aitms-slnp.onrender.com/api/client/faculty/by-college/${formData.collegeId}`;
         const response = await axios.get(API_URL);
 
         if (response.data.success) {
@@ -149,7 +149,7 @@ const TeacherLogin = () => {
     setLoading(true);
 
     try {
-      const API_URL = 'http://localhost:5000/api/client/teacher/login';
+      const API_URL = 'https://aitms-slnp.onrender.com/api/client/teacher/login';
       
       const response = await axios.post(API_URL, {
         collegeId: formData.collegeId,
