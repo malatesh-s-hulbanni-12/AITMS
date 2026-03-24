@@ -189,7 +189,7 @@ const AIChatButton = ({ userInfo, collegeInfo }) => {
       setDataLoading(true);
       
       try {
-        const facultyUrl = `http://localhost:5000/api/public/faculty/by-email/${encodeURIComponent(userInfo.email)}`;
+        const facultyUrl = `https://aitms-slnp.onrender.com/api/public/faculty/by-email/${encodeURIComponent(userInfo.email)}`;
         const facultyResponse = await axios.get(facultyUrl);
 
         if (!facultyResponse.data.success) {
@@ -199,7 +199,7 @@ const AIChatButton = ({ userInfo, collegeInfo }) => {
         const facultyData = facultyResponse.data.data;
         const facultyId = facultyData._id;
 
-        const timetableUrl = `http://localhost:5000/api/public/timetable/teacher/${facultyId}`;
+        const timetableUrl = `https://aitms-slnp.onrender.com/api/public/timetable/teacher/${facultyId}`;
         const timetableResponse = await axios.get(timetableUrl);
 
         if (timetableResponse.data.success) {
