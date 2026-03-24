@@ -548,7 +548,7 @@ const ManageTimetable = () => {
       setLoadingFaculty(true);
       
       try {
-        const response = await axios.get('http://localhost:5000/api/faculty/all', {
+        const response = await axios.get('https://aitms-slnp.onrender.com/api/faculty/all', {
           headers: getAuthHeaders()
         });
         
@@ -599,7 +599,7 @@ const ManageTimetable = () => {
           semester: filters.semester
         });
 
-        const url = `http://localhost:5000/api/timetable/all?${params}`;
+        const url = `https://aitms-slnp.onrender.com/api/timetable/all?${params}`;
         console.log('📡 Fetching from URL:', url);
 
         const response = await axios.get(url, {
@@ -759,7 +759,7 @@ const ManageTimetable = () => {
         semester: parseInt(departmentInfo.semester)
       };
 
-      const url = `http://localhost:5000/api/timetable/${targetTimetable._id}`;
+      const url = `https://aitms-slnp.onrender.com/api/timetable/${targetTimetable._id}`;
       console.log('📡 Sending PUT request to:', url);
       
       const response = await axios.put(
@@ -777,7 +777,7 @@ const ManageTimetable = () => {
         });
         
         const refreshResponse = await axios.get(
-          `http://localhost:5000/api/timetable/all?${params}`,
+          `https://aitms-slnp.onrender.com/api/timetable/all?${params}`,
           { headers: getAuthHeaders() }
         );
         
@@ -836,7 +836,7 @@ const ManageTimetable = () => {
       };
 
       const response = await axios.put(
-        `http://localhost:5000/api/timetable/${targetTimetable._id}`,
+        `https://aitms-slnp.onrender.com/api/timetable/${targetTimetable._id}`,
         updateData,
         { headers: getAuthHeaders() }
       );
@@ -850,7 +850,7 @@ const ManageTimetable = () => {
         });
         
         const refreshResponse = await axios.get(
-          `http://localhost:5000/api/timetable/all?${params}`,
+          `https://aitms-slnp.onrender.com/api/timetable/all?${params}`,
           { headers: getAuthHeaders() }
         );
         
