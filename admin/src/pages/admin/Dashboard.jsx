@@ -44,21 +44,21 @@ const Dashboard = () => {
         // Fetch faculty stats
         console.log('📡 Fetching faculty stats...');
         const facultyResponse = await axios.get(
-          `http://localhost:5000/api/faculty/stats`,
+          `https://aitms-slnp.onrender.com/api/faculty/stats`,
           { headers: { 'Authorization': `Bearer ${token}` } }
         );
 
         // Fetch students count
         console.log('📡 Fetching students count...');
         const studentsResponse = await axios.get(
-          `http://localhost:5000/api/client/students/count?collegeId=${collegeInfo._id}`,
+          `https://aitms-slnp.onrender.com/api/client/students/count?collegeId=${collegeInfo._id}`,
           { headers: { 'Authorization': `Bearer ${token}` } }
         );
 
         // Fetch courses/timetables
         console.log('📡 Fetching timetables...');
         const timetablesResponse = await axios.get(
-          `http://localhost:5000/api/timetable/all?limit=100`,
+          `https://aitms-slnp.onrender.com/api/timetable/all?limit=100`,
           { headers: { 'Authorization': `Bearer ${token}` } }
         );
 
@@ -66,7 +66,7 @@ const Dashboard = () => {
         console.log('📡 Fetching today\'s schedule...');
         const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
         const todayScheduleResponse = await axios.get(
-          `http://localhost:5000/api/timetable/today?day=${today}`,
+          `https://aitms-slnp.onrender.com/api/timetable/today?day=${today}`,
           { headers: { 'Authorization': `Bearer ${token}` } }
         );
 
