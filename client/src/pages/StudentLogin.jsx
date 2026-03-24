@@ -27,7 +27,7 @@ const StudentLogin = () => {
     setLoading(true);
 
     try {
-      const API_URL = 'http://localhost:5000/api/client/student/login';
+      const API_URL = 'https://aitms-slnp.onrender.com/api/client/student/login';
       const response = await axios.post(API_URL, formData);
 
       if (response.data.success) {
