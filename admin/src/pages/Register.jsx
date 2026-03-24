@@ -60,7 +60,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', {
+      const response = await axios.post('https://aitms-slnp.onrender.com/api/auth/register', {
         collegeName: formData.collegeName,
         collegeEmail: formData.collegeEmail,
         password: formData.password,
