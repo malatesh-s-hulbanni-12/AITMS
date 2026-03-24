@@ -25,7 +25,7 @@ const StudentAIChatButton = ({ userInfo }) => {
       
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/public/timetable/department/${userInfo.department}/semester/${userInfo.semester}`
+          `https://aitms-slnp.onrender.com/api/public/timetable/department/${userInfo.department}/semester/${userInfo.semester}`
         );
 
         if (response.data.success) {
