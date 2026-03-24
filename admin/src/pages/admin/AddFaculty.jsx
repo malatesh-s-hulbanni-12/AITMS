@@ -60,7 +60,7 @@ const AddFaculty = () => {
       const token = localStorage.getItem('token');
       
       const response = await axios.post(
-        'http://localhost:5000/api/faculty/add',
+        'https://aitms-slnp.onrender.com/api/faculty/add',
         formData,
         {
           headers: {
