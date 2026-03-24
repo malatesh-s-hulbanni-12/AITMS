@@ -269,7 +269,7 @@ const CreateTimetable = () => {
       try {
         setLoading(true);
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/faculty/all', {
+        const response = await axios.get('https://aitms-slnp.onrender.com/api/faculty/all', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         
@@ -330,7 +330,7 @@ const CreateTimetable = () => {
       setCheckingConflicts(true);
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        'http://localhost:5000/api/timetable/check-conflicts',
+        'https://aitms-slnp.onrender.com/api/timetable/check-conflicts',
         { entries: [newEntry] },
         { headers: { 'Authorization': `Bearer ${token}` } }
       );
@@ -469,7 +469,7 @@ const CreateTimetable = () => {
       };
 
       const response = await axios.post(
-        'http://localhost:5000/api/timetable/create',
+        'https://aitms-slnp.onrender.com/api/timetable/create',
         timetableData,
         {
           headers: { 'Authorization': `Bearer ${token}` }
